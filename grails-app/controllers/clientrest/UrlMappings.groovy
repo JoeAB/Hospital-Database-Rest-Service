@@ -12,7 +12,6 @@ class UrlMappings {
             collection {
                 '/searchFName'(controller:'patient', action:'searchFName')
                 '/searchLName'(controller:'patient', action:'searchLName')
-
            }
 
         }

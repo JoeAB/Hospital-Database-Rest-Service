@@ -8,6 +8,11 @@ class PatientController extends RestfulController {
         super(Patient)
     }
     
+    @Override
+    def delete(){
+        respond(['Not allowed'])     
+    }
+   
     def searchFName(String q, Integer max ) { 
        if(q) {
             def query = Patient.where { 
@@ -19,6 +24,7 @@ class PatientController extends RestfulController {
             respond([]) 
         }
     }
+    
     def searchLName(String q, Integer max ) { 
         if(q) {
             def query = Patient.where { 
@@ -30,5 +36,7 @@ class PatientController extends RestfulController {
             respond([]) 
         }
     }
+    
+   
 }
 
